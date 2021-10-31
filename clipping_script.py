@@ -23,8 +23,9 @@ for t in _type:
 					if len(t) > 0:
 						_t = t[1:]
 
-					print("clipped/" + _t + "/" + str(count) + ".png")
+					path = "clipped/" + _t + "/" + str.zfill(str(count), 5) + ".png"
 
-					cv2.imwrite("clipped/" + _t + "/" + str(count) + ".png", crop)
+					cv2.imwrite(path, crop)
+					print(path)
 					count +=1
 
